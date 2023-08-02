@@ -5,6 +5,6 @@ services:
     image: myapp:latest
     build:
       context: .
-      dockerfile: ./Docker/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - "3000:80"
