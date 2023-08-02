@@ -2,10 +2,10 @@ version: "3"
 services:
   # Multistate build
   MyApp:
-    image: MyApp:latest
+    image: myapp:latest
     build:
       context: .
-      dockerfile: ./Docker/.
+      dockerfile: ./Docker/Dockerfile
     ports:
       - "3000:80"
 
