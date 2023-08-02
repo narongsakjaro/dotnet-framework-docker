@@ -1,0 +1,12 @@
+version: "3"
+services:
+  # Multistate build
+  MyApp:
+    image: MyApp:latest
+    build:
+      context: .
+      dockerfile: ./Docker/.
+    ports:
+      - "3000:80"
+
+# docker build -t narongsakjaro/crudapi-golang -f multistage.Dockerfile .
