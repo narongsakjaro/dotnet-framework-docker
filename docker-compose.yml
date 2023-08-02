@@ -8,5 +8,3 @@ services:
       dockerfile: ./Docker/Dockerfile
     ports:
       - "3000:80"
-
-# docker build -t narongsakjaro/crudapi-golang -f multistage.Dockerfile .
