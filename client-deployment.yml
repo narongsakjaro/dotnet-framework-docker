@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  # จำนวน Pod ที่จะสร้าง
+  replicas: 3
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata: 
+      # ชื่ออะไรก็ได้
+      name: client-pods
+      labels:
+        app: client
+    spec:
+      containers:
+        - name: client
+          image: justzsdotdev/dotnet-framework-4.7.2:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-service
+spec:
+  type: ClusterIP
+  selector:
+    app: client
+  ports:
+    - port: 80
+      targetPort: 80
