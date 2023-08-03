@@ -4,7 +4,7 @@ metadata:
   name: client-deployment
 spec:
   # จำนวน Pod ที่จะสร้าง
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: client
