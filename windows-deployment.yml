@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: eks-sample-windows-deployment
-  namespace: eks-sample-app
+  # namespace: eks-sample-app
   labels:
     app: eks-sample-windows-app
 spec:
